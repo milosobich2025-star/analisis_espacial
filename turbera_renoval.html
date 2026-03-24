@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turbera Renoval - Análisis Territorial</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .header-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                              url('https://milosobich2025-star.github.io/analisis_espacial/turbera.png');
+            background-size: cover;
+            background-position: center;
+        }
+        .map-container {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+    <header class="header-bg h-64 flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2 drop-shadow-lg">
+            Turbera Renoval
+        </h1>
+        <p class="text-lg font-light tracking-wide drop-shadow-md">
+            Salud Vegetacional y Monitoreo de Humedales
+        </p>
+        <a href="index.html" class="mt-4 text-sm bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/50 py-1 px-4 rounded-full transition">
+            ← Volver al Inicio
+        </a>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-10 px-4">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-4 bg-green-800 text-white font-bold uppercase tracking-widest text-xs">
+                    Visualizador 5: Salud de la Vegetación
+                </div>
+                <div class="map-container">
+                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberavegsaludable" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-4 bg-green-800 text-white font-bold uppercase tracking-widest text-xs">
+                    Visualizador 6: Diferencia de Cobertura
+                </div>
+                <div class="map-container">
+                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberadifcober" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-4 bg-green-800 text-white font-bold uppercase tracking-widest text-xs">
+                    Visualizador 7: Índices de Estrés Hídrico
+                </div>
+                <div class="map-container">
+                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberaestreshidrico" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
+                <div class="p-4 bg-green-800 text-white font-bold uppercase tracking-widest text-xs">
+                    Visualizador 8: Comparativa NDVI (Interanual)
+                </div>
+                <div class="map-container">
+                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberandvicomp" width="100%" height="100%" frameborder="0"></iframe>
+                </div>
+            </div>
+
+        </div>
+
+        <section class="mt-12 p-8 bg-green-50 rounded-2xl border border-green-100">
+            <h3 class="text-xl font-bold text-green-900 mb-4">Importancia Ecosistémica</h3>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Las turberas de la Región de Magallanes son reservorios críticos de carbono y agua. Este observatorio permite monitorear su estado mediante el análisis de la <strong>salud vegetal</strong> y el <strong>estrés hídrico</strong>, detectando posibles degradaciones por cambios en el régimen de precipitaciones o intervención humana.
+            </p>
+            <p class="text-sm text-green-700 italic">
+                *Los datos se actualizan dinámicamente según la disponibilidad de imágenes Sentinel-2.
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t py-8 text-center text-gray-400 text-sm">
+        <p>Observatorio de Análisis Territorial Magallanes &copy; 2026</p>
+    </footer>
+
+</body>
+</html>
