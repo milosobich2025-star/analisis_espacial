@@ -7,130 +7,56 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .header-bg {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                               url('https://milosobich2025-star.github.io/analisis_espacial/turbera.png');
             background-size: cover;
             background-position: center;
         }
-        .map-container {
-            position: relative;
-            padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
-            height: 0;
-            overflow: hidden;
-        }
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+<body class="bg-gray-100 font-sans">
 
-    <header class="header-bg h-80 flex items-center justify-center text-center text-white px-4">
-        <div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-2 drop-shadow-lg">
-                Análisis Territorial Vegetación Magallanes
-            </h1>
-            <p class="text-xl font-light tracking-wide drop-shadow-md">
-                Observatorio de Monitoreo Satelital y Dinámicas Ecosistémicas
-            </p>
-        </div>
+    <header class="header-bg h-96 flex flex-col items-center justify-center text-center text-white px-4">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 drop-shadow-xl">
+            Análisis Territorial Vegetación Magallanes
+        </h1>
+        <p class="text-xl md:text-2xl font-light max-w-2xl drop-shadow-md">
+            Plataforma de monitoreo ecosistémico y análisis geoespacial.
+        </p>
     </header>
 
-    <main class="max-w-7xl mx-auto py-12 px-4">
-        
-        <section class="mb-16 text-center">
-            <h2 class="text-2xl font-semibold border-b-2 border-green-600 inline-block pb-2 mb-6">Visualizadores Cartográficos</h2>
-            <p class="text-gray-600 max-w-3xl mx-auto">
-                Plataforma interactiva basada en Google Earth Engine para el análisis de índices de vegetación, sedimentos y salud hídrica en la Región de Magallanes.
-            </p>
-        </section>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+    <main class="max-w-6xl mx-auto py-16 px-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">1. Laguna Blanco: Evolución NDVI (Años)</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/lagunandvianios"></iframe>
-                </div>
+            <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-blue-600 text-center">
+                <h2 class="text-2xl font-bold mb-4">Laguna Blanca</h2>
+                <p class="text-gray-600 mb-6">Monitoreo de índices de vegetación (NDVI) y análisis de sedimentos acumulados.</p>
+                <a href="laguna_blanca.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Ver Mapas
+                </a>
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">2. Laguna Blanca: Análisis de Sedimentos</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/lagunablancosedimentosanio"></iframe>
-                </div>
+            <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-teal-600 text-center">
+                <h2 class="text-2xl font-bold mb-4">Laguna Los Palos</h2>
+                <p class="text-gray-600 mb-6">Comparativa multitemporal de NDVI vs NDWI y dinámica de sedimentos.</p>
+                <a href="laguna_palos.html" class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Ver Mapas
+                </a>
             </div>
 
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">3. Laguna Los Palos: Comparativa NDVI vs NDWI</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/lagunalospalosndvi"></iframe>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">4. Laguna Los Palos: Dinámica de Sedimentos</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/lagunalospalossedimentos"></iframe>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">5. Turbera: Estado de Salud de la Vegetación</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberavegsaludable"></iframe>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">6. Turbera: Diferencia de Cobertura</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberadifcober"></iframe>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">7. Turbera: Índices de Estrés Hídrico</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberaestreshidrico"></iframe>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200">
-                <div class="p-4 bg-green-700 text-white">
-                    <h3 class="font-bold uppercase tracking-wider text-sm">8. Turbera: Comparativa NDVI Interanual</h3>
-                </div>
-                <div class="map-container">
-                    <iframe src="https://project-585c1438-b8bc-491e-838.projects.earthengine.app/view/turberandvicomp"></iframe>
-                </div>
+            <div class="bg-white p-8 rounded-2xl shadow-md border-t-4 border-green-700 text-center">
+                <h2 class="text-28 font-bold mb-4">Turbera Renoval</h2>
+                <p class="text-gray-600 mb-6">Estado de salud, estrés hídrico y evolución de la cobertura vegetal.</p>
+                <a href="turbera_renoval.html" class="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full transition duration-300">
+                    Ver Mapas
+                </a>
             </div>
 
         </div>
     </main>
 
-    <footer class="bg-gray-800 text-white py-8 mt-12 text-center">
-        <p class="text-sm opacity-75">
-            &copy; 2026 Análisis Territorial Vegetación Magallanes. Desarrollado con tecnología Google Earth Engine.
-        </p>
+    <footer class="text-center py-10 text-gray-500 text-sm">
+        &copy; 2026 Análisis Territorial Magallanes
     </footer>
 
 </body>
